@@ -8,36 +8,36 @@ class Directory extends React.Component{
         this.state = {
             sections: [
                 {
-                  title: 'hats',
-                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  title: 'mouse',
+                  imageUrl: 'https://cdn.pixabay.com/photo/2017/05/24/21/33/workplace-2341642_960_720.jpg',
                   id: 1,
-                  linkUrl: 'shop/hats'
+                  linkUrl: 'shop/mouses'
                 },
                 {
-                  title: 'jackets',
-                  imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  title: 'keyboards',
+                  imageUrl: 'https://cdn.pixabay.com/photo/2015/02/03/02/14/keyboard-621830_960_720.jpg',
                   id: 2,
-                  linkUrl: 'shop/jackets'
+                  linkUrl: 'shop/keyboards'
                 },
                 {
-                  title: 'sneakers',
-                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  title: 'wifi routers',
+                  imageUrl: 'https://cdn.pixabay.com/photo/2017/04/04/17/22/netgear-2202273_960_720.jpg',
                   id: 3,
-                  linkUrl: 'shop/sneakers'
+                  linkUrl: 'shop/routers'
                 },
                 {
-                  title: 'womens',
-                  imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                  title: 'earphones',
+                  imageUrl: 'https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
                   size: 'large',
                   id: 4,
-                  linkUrl: 'shop/womens'
+                  linkUrl: 'shop/earphones'
                 },
                 {
-                  title: 'mens',
-                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                  title: 'Earpods',
+                  imageUrl: 'https://images.unsplash.com/photo-1579674862001-405e6b05fe0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
                   size: 'large',
                   id: 5,
-                  linkUrl: 'shop/mens'
+                  linkUrl: 'shop/airpods'
                 }
               ]
               
@@ -48,8 +48,8 @@ class Directory extends React.Component{
         return(
             <div className="directory-menu">
                 {
-                    this.state.sections.map(({title, imageUrl,id, size}) => (
-                        <MenuItem key = {id} title = {title} imageUrl = {imageUrl} size = {size}/>
+                    this.state.sections.map(({id, ...sectionProps}) => (
+                        <MenuItem key = {id} {...sectionProps}/>
                     ))
                 }
             </div>

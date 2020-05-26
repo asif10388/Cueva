@@ -8,10 +8,10 @@ class Directory extends React.Component{
         this.state = {
             sections: [
                 {
-                  title: 'mouse',
+                  title: 'cable',
                   imageUrl: 'https://cdn.pixabay.com/photo/2017/05/24/21/33/workplace-2341642_960_720.jpg',
                   id: 1,
-                  linkUrl: 'shop/mouses'
+                  linkUrl: 'shop/cables'
                 },
                 {
                   title: 'keyboards',
@@ -37,7 +37,7 @@ class Directory extends React.Component{
                   imageUrl: 'https://images.unsplash.com/photo-1579674862001-405e6b05fe0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
                   size: 'large',
                   id: 5,
-                  linkUrl: 'shop/airpods'
+                  linkUrl: 'shop/earpods'
                 }
               ]
               

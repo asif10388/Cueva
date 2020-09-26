@@ -7,11 +7,20 @@ import "./directory.styles.scss";
 
 const Directory = ({ sections }) => {
   return (
-    <div className="directory-menu">
-      {sections.map(({ id, ...sectionProps }) => (
-        <MenuItem key={id} {...sectionProps} />
-      ))}
-    </div>
+    <>
+      {/* <div className="directory-menu">
+        {sections.map(({ id, ...sectionProps }) => (
+          <MenuItem key={id} {...sectionProps} />
+        ))}
+      </div> */}
+
+      <div class="md:flex md:flex-wrap mt-8 justify-center items-center">
+        {" "}
+        {sections.map(({ id, ...sectionProps }) => (
+          <MenuItem key={id} {...sectionProps} />
+        ))}
+      </div>
+    </>
   );
 };
 

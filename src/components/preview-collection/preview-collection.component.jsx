@@ -11,7 +11,7 @@ const PreviewCollection = ({ title, items, history, match, routeName }) => (
     >
       {title.toUpperCase()}
     </h1>
-    <div className="preview">
+    <div className="md:flex">
       {items
         .filter((item, index) => index < 4)
         .map((item) => (

@@ -1,5 +1,5 @@
 {
-  "name": "cueva",
+  "name": "gadgetahead",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

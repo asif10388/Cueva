@@ -1,12 +1,17 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import Header from "./components/header/header.component";
-import SignupAndSigninPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import SignIn from "./components/sign-in/sign-in.component";
+import SignUp from "./components/sign-up/sign-up.component";
+import Contact from "./pages/contact/contact.component";
+import About from "./pages/about/about.component";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { connect } from "react-redux";
 
 import { setCurrentUser } from "./redux/user/user.actions";
 import { createStructuredSelector } from "reselect";
@@ -47,15 +52,20 @@ class App extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
           <Route
             exact
             path="/signin"
             render={() =>
-              this.props.currentUser ? (
-                <Redirect to="/" />
-              ) : (
-                <SignupAndSigninPage />
-              )
+              this.props.currentUser ? <Redirect to="/" /> : <SignIn />
+            }
+          />
+          <Route
+            exact
+            path="/signup"
+            render={() =>
+              this.props.currentUser ? <Redirect to="/" /> : <SignUp />
             }
           />
         </Switch>
